@@ -1,0 +1,26 @@
+.patient-list-panel {
+  padding: 1.75rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-container {
+  width: 100%;
+}
+
+table {
+  background: var(--bg-card);
+}
+
+tbody tr:hover {
+  background: rgba(0, 180, 216, 0.05);
+}
+
+.btn-primary {
+  width: max-content;
+}

@@ -1,0 +1,23 @@
+<section class="simulation-room-shell">
+  <div class="header-bar">
+    <div class="header-copy">
+      <p class="eyebrow">Unidad de Cuidados Intensivos</p>
+      <h1>Monitor de Cuidados Intensivos</h1>
+      <p class="status-text">{{ statusText }}</p>
+    </div>
+    <button type="button" class="action-button" (click)="startProtocol()">
+      {{ buttonLabel }}
+    </button>
+  </div>
+
+  <div class="viewer-card">
+    <div class="viewer-label">
+      <span class="badge">Visor 3D en tiempo real</span>
+      <p>Modelo anatómico del corazón con rotación suave para análisis visual.</p>
+    </div>
+
+    <div class="canvas-frame">
+      <div #canvasContainer class="canvas-container"></div>
+    </div>
+  </div>
+</section>

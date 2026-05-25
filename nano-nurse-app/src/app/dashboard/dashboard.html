@@ -1,0 +1,15 @@
+<section class="dashboard-panel card">
+  <header class="panel-header">
+    <div>
+      <p class="section-title">Dashboard Hospitalario</p>
+      <p class="text-muted">Información general y estado de la red clínica.</p>
+    </div>
+  </header>
+
+  <div class="dashboard-grid">
+    <article class="dashboard-card" *ngFor="let stat of stats">
+      <p class="text-muted">{{ stat.label }}</p>
+      <h3>{{ stat.value }}</h3>
+    </article>
+  </div>
+</section>

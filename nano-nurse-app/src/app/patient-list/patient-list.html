@@ -1,0 +1,31 @@
+<section class="patient-list-panel card">
+  <header class="panel-header">
+    <div>
+      <p class="section-title">Lista de Pacientes</p>
+      <p class="text-muted">Casos clínicos activos y estado de cada paciente.</p>
+    </div>
+  </header>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Diagnóstico</th>
+          <th>Estado</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.id }}</td>
+          <td>{{ patient.name }}</td>
+          <td>{{ patient.diagnosis }}</td>
+          <td><span [ngClass]="stateClass(patient.status)">{{ patient.status }}</span></td>
+          <td><button class="btn-primary" (click)="selectPatient.emit(patient)">Abrir Visor 3D</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
